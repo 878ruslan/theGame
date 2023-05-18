@@ -1,13 +1,18 @@
 import { Button, Form, Input, Row } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUsername } from "../../store/userSlice";
 import styles from './styles.module.scss';
 
 export const Auth = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const onSubmit = (values) => {
-        localStorage.setItem('nickname', values.nickname);
+        dispatch(setUsername(values.nickname));
         navigate('/game');
     };
+
+    const initialValue = localStorage.getItem('nickname') || '';
 
     return (
         <div className={styles.wrapper}>

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import styles from './styles.module.scss';
 
-
 export const Header = () => {
     const username = useSelector((store) => store.user.username);
 

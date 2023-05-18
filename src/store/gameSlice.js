@@ -16,10 +16,26 @@ reducers: {
     },    
     updateCategory: (state, action) => {
         const category = action.payload;
-        const updatedQuestions = category.clues.slice(0, 5);
+        const updatedQuestions = category.clues
+         .filter(clue => !!clue.value)
+         .slice(0, 5)
+         .map((clue) => ({ ...clue, isAnswered: false }));
         state.categories[category.title] = updatedQuestions;
-    } 
-   }
+    },
+    hideQuestion: (state, action) => {
+        const {
+            question: { id },
+            title
+        } = action.payload;    
+        const updated = state.categories[title].map((q) => {
+            if (q.id !== id) return q;
+            return{ ...q, isAnswered: true };             
+    });
+    
+    state.categories[title] = updated;
+
+    }
+  } 
 });
 
-export const { updateCategories, updateCategory } = gameSlice.actions;
+export const { updateCategories, updateCategory, hideQuestion } = gameSlice.actions;

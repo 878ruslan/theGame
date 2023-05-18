@@ -7,7 +7,7 @@ export const Table = (props) => {
     const list = Object.entries(data);
 
     return (
-        <div>
+        <div className={styles.table}>
             {list.map((item) => {
                 const [title, questions] = item;
                 return <Row key={title} title={title} questions={questions} />;

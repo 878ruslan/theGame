@@ -1,0 +1,24 @@
+.row {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 60%;
+
+    & > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100%;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        background-color: blue;
+        font-size: large;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        width: 200px;
+        display: flex;
+    }
+}
