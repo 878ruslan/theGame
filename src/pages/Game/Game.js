@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Wrapper, Table } from '../../components';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCategories, updateCategory} from '../../store/gameSlice';
-import { loadingLogo } from 'antd';
 import styles from './styles.module.scss';
 
 
