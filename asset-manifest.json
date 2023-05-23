@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/thegame/static/css/main.4b93e1cf.css",
+    "main.js": "/thegame/static/js/main.42b35818.js",
+    "index.html": "/thegame/index.html",
+    "main.4b93e1cf.css.map": "/thegame/static/css/main.4b93e1cf.css.map",
+    "main.42b35818.js.map": "/thegame/static/js/main.42b35818.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b93e1cf.css",
+    "static/js/main.42b35818.js"
+  ]
+}
