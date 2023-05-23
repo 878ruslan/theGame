@@ -12,8 +12,6 @@ export const Auth = () => {
         navigate('/game');
     };
 
-    const initialValue = localStorage.getItem('nickname') || '';
-
     return (
         <div className={styles.wrapper}>
             <Form onFinish={onSubmit}>

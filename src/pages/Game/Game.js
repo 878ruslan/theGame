@@ -25,7 +25,7 @@ useEffect(() => {
   }
 
   fetchCategories();
-}, []);
+}, [dispatch]);
 
 if (loading) return <loadingLogo className={styles.spin} />;
 

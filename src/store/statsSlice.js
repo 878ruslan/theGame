@@ -1,5 +1,3 @@
-// statsSlice.js
-
 import { createSlice } from '@reduxjs/toolkit';
 
 export const statsSlice = createSlice({
