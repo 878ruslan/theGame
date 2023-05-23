@@ -16,10 +16,10 @@ export const statsSlice = createSlice({
       state.played += 1;
       if (isCorrect) {
         state.correct += 1;
-        state.points += 10; // Increase points for correct answers (example: +10 points)
+        state.points += 10; // добавляет 10 баллов за правильный ответ
       } else {
         state.wrong += 1;
-        state.points -= 5; // Decrease points for wrong answers (example: -5 points)
+        state.points -= 5; // отнимает 5 баллов за неверный ответ
       }
     }
   }
